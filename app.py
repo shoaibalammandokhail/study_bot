@@ -66,7 +66,7 @@ If the question is not related to study, politely refuse.
         return {"response": response.content}
 
     except Exception as e:
-        print("🔥 ERROR:", e)
+        print(" ERROR:", e)
         return {"error": str(e)}
 
 @app.get("/history/{user_id}")
