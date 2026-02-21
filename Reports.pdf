@@ -1,0 +1,42 @@
+AI Study Assistant with Context Memory
+Name: Shoaib Alam
+
+1. Introduction
+
+This project implements an AI-powered Study Assistant using FastAPI and Groq LLM. The system is designed to answer academic-related questions and store user conversation history for contextual responses.
+
+2. Objective
+
+Build a chatbot API
+Implement conversational memory
+Deploy to cloud
+Integrate MongoDB database
+
+3. System Architecture
+
+User → FastAPI → Groq LLM
+↓
+MongoDB (Memory Storage)
+
+4. Memory Implementation
+
+The chatbot retrieves the last 5 messages of the same user from MongoDB and adds them to the prompt before sending it to the LLM.
+This ensures contextual understanding and continuity.
+
+5. API Endpoints
+POST /chat
+Generates response and stores chat in database.
+GET /history/{user_id}
+Returns previous chat history.
+
+6. Deployment
+
+Hosted on Railway
+Environment variables configured
+MongoDB connected successfully
+
+7. Challenges Faced
+
+Environment variable configuration
+Railway deployment errors
+MongoDB connection handling
